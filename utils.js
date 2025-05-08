@@ -20,3 +20,20 @@ function getCookie(name) {
   }
   return null;
 }
+function formBack() {
+  // 获取当前 URL 的查询参数
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  // 获取 redirect 参数
+  const redirectUrl = urlParams.get('returnUrl');
+
+  // 如果有 redirect 参数，则跳转
+  if (redirectUrl) {
+    window.location.href = decodeURIComponent(redirectUrl);
+  } else {
+    console.warn("没有找到 redirect 参数");
+    // 可选：跳转到默认页面
+    // window.location.href = "/";
+  }
+}
