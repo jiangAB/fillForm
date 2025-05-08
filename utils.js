@@ -37,3 +37,11 @@ function formBack() {
     // window.location.href = "/";
   }
 }
+function filledInForm() {
+    // 设置 visited=1; 并让其在 2099-12-31 过期
+    const expires = "expires=Fri, 31 Dec 2099 23:59:59 GMT";
+    // 设置 cookie
+    document.cookie = "visited=1; " + expires + "; path=/";
+    formBack()
+
+}
