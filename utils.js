@@ -37,11 +37,15 @@ function getCookie(name) {
 function formBack() {
   let lang = getLang()
   console.log(lang)
+  let href = '/'
   if (lang === 'ja') {
-    window.location.href = "/";
+    href = "/";
   } else {
-    window.location.href = `/${lang}`;
+    href = `/${lang}`;
   }
+  setTimeout(() => {
+    window.location.href = href
+  }, 3000)
   // 获取当前 URL 的查询参数
   // const queryString = window.location.search;
   // const urlParams = new URLSearchParams(queryString);
