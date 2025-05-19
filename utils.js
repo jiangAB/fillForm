@@ -40,7 +40,7 @@ function formBack() {
   if (lang === 'ja') {
     window.location.href = "/";
   } else {
-    window.location.href = `${lang}`;
+    window.location.href = `/${lang}`;
   }
   // 获取当前 URL 的查询参数
   // const queryString = window.location.search;
