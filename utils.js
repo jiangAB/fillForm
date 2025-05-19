@@ -4,7 +4,7 @@ function check() {
       return;
     }
     if (document.querySelector('._404-title')) {
-      console.log(document.querySelector('._404-title'))
+      // console.log(document.querySelector('._404-title'))
       return;
     }
     var hasVisited = getCookie("visited");
