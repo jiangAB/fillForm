@@ -8,7 +8,9 @@ function check() {
       // 获取当前页面路径并编码
       var currentPage = encodeURIComponent(window.location.pathname + window.location.search);
       // 跳转到表单页，并将当前页面路径作为参数传递
-      window.location.href = "/form?returnUrl=" + currentPage;
+      setTimeout(() => {
+        window.location.href = "/form?returnUrl=" + currentPage;
+      }, 1500)
       // window.location.href = "/form";
     }
   });
