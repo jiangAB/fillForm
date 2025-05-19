@@ -1,6 +1,6 @@
 function check() {
   document.addEventListener("DOMContentLoaded", function () {
-    if (window.location.pathname.includes('/form')) {
+    if (window.location.pathname.includes('/form') || window.location.pathname.includes('/404')) {
       return;
     }
     var hasVisited = getCookie("visited");
