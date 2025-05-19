@@ -1,5 +1,8 @@
 function check() {
   document.addEventListener("DOMContentLoaded", function () {
+    if (window.location.pathname.includes('/form')) {
+      return;
+    }
     var hasVisited = getCookie("visited");
     if (!hasVisited) {
       // 获取当前页面路径并编码
