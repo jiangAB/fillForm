@@ -3,6 +3,10 @@ function check() {
     if (window.location.pathname.includes('/form') || window.location.pathname.includes('/404')) {
       return;
     }
+    if (document.querySelector('._404-title')) {
+      console.log(document.querySelector('._404-title'))
+      return;
+    }
     var hasVisited = getCookie("visited");
     if (!hasVisited) {
       // 获取当前页面路径并编码
